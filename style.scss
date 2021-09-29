@@ -73,3 +73,22 @@ header {
     }
   }
 }
+
+.breadcrumbs {
+  padding: 10px 0;
+  font-size: 0;
+  li {
+    font-size: 15px;
+    display: inline-block;
+    &,
+    a {
+      color: #666;
+    }
+    &:first-child {
+      a {
+        color: #000;
+      }
+    }
+  }
+}
+
