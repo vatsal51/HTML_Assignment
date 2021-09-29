@@ -132,7 +132,52 @@ main {
           font-size: 23px;
           font-weight: 300;
         }
+        .star-class{
+            display: inline-block;
+        }
+        .android-version{
+            font-size: 12px;
+            vertical-align: top;
+            padding: 5px;
+            background: #f3f9fb;
+        }
       }
+
+        .color {
+          padding: 12px;
+          margin-right: 12px;
+          display: inline-block;
+        }
+          .color-1 {
+            background: #4f4b65;
+          }
+          .color-2 {
+            background: #b3a99b;
+          }
+          .color-3 {
+            background: #0f0f11;
+          }
+
+          .price-text{
+              .price{
+                  font-size: 23px;
+                  font-weight: 500;
+                  color: #637fff;
+                  vertical-align: middle;
+                  margin-right: 30px;
+              }
+              a{
+                  text-transform: uppercase;
+                  font-size: 14px;
+                  font-weight: bold;
+                  background: #637fff;
+                  color: #fff;
+                  border-radius: 50px;
+                  padding: 15px 50px;
+                  text-decoration: none;
+              }
+          }
+    
 
       .specs-text,
       .carrier-text {
