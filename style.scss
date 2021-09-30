@@ -1,8 +1,10 @@
+$box: 0 5px 10px -2px rgba(#000000, 0.1);
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  max-width: 100%;
 }
 html {
   font-family: "Poppins", sans-serif;
@@ -31,7 +33,6 @@ a {
 }
 img {
   display: block;
-  max-width: 100%;
   border: 0;
   max-height: 100%;
 }
@@ -54,9 +55,9 @@ img {
 .box {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
-.d-flex {
+.justify-flex {
   display: flex;
   justify-content: space-between;
 }
@@ -74,7 +75,7 @@ img {
 // HEADER
 header {
   padding: 12px 0;
-  box-shadow: 0 5px 10px -2px rgba(#000000, 0.1);
+  box-shadow: $box;
   .box {
     align-items: center;
     justify-content: space-between;
@@ -124,155 +125,157 @@ header {
   }
 }
 
-main {
-  .product-box {
-    display: flex;
-    box-shadow: 0 5px 10px -2px rgba(#000000, 0.1);
-    .img-wrapper {
-      flex: 1 0 300px;
-      position: relative;
-      height: 500px;
-    }
-    .text-wrapper {
-      padding: 40px 15px;
-      flex: 1 0 auto;
-      .main-text {
-        display: flex;
-        justify-content: space-between;
-        .product-title {
-          font-size: 28px;
-          font-weight: bold;
-        }
-        .rating-score {
-          font-size: 23px;
-          font-weight: 300;
-        }
-        .star-class {
-          display: inline-block;
-        }
-        .android-version {
-          font-size: 12px;
-          vertical-align: top;
-          padding: 5px;
-          background: #f3f9fb;
-        }
+.product-box {
+  box-shadow: $box;
+  margin-bottom: 30px;
+  .img-wrapper {
+    flex: 1 0 300px;
+    position: relative;
+    height: 500px;
+  }
+  .text-wrapper {
+    padding: 40px 15px;
+    flex: 1 0 auto;
+    .main-text {
+      display: flex;
+      justify-content: space-between;
+      .product-title {
+        font-size: 28px;
+        font-weight: bold;
       }
-
-      .color {
-        padding: 12px;
-        margin-right: 12px;
+      .rating-score {
+        font-size: 23px;
+        font-weight: 300;
+      }
+      .star-class {
         display: inline-block;
       }
-      .color-1 {
-        background: #4f4b65;
+      .android-version {
+        font-size: 12px;
+        vertical-align: top;
+        padding: 5px;
+        background: #f3f9fb;
       }
-      .color-2 {
-        background: #b3a99b;
-      }
-      .color-3 {
-        background: #0f0f11;
-      }
+    }
 
-      .price-text {
+    .color {
+      padding: 12px;
+      margin-right: 12px;
+      display: inline-block;
+    }
+    .color-1 {
+      background: #4f4b65;
+    }
+    .color-2 {
+      background: #b3a99b;
+    }
+    .color-3 {
+      background: #0f0f11;
+    }
+
+    .price-text {
+      padding: 10px 0;
+      .price {
+        font-size: 23px;
+        font-weight: 500;
+        color: #637fff;
+        vertical-align: middle;
+        margin-right: 30px;
+      }
+      a {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        background: #637fff;
+        color: #fff;
+        border-radius: 50px;
+        padding: 15px 50px;
+        text-decoration: none;
+      }
+    }
+    .specs-text {
+      margin-top: 20px;
+    }
+    .specs-text,
+    .carrier-text {
+      @extend .box;
+      font-weight: lighter;
+      .img-wrappy {
+        height: 50px;
+      }
+      .img-wrappy2 {
+        height: 100px;
+        position: relative;
+      }
+      img,
+      p {
         padding: 10px 0;
-        .price {
-          font-size: 23px;
-          font-weight: 500;
-          color: #637fff;
-          vertical-align: middle;
-          margin-right: 30px;
-        }
-        a {
-          text-transform: uppercase;
-          font-size: 14px;
-          font-weight: bold;
-          background: #637fff;
-          color: #fff;
-          border-radius: 50px;
-          padding: 15px 50px;
-          text-decoration: none;
-        }
       }
-      .specs-text {
-        margin-top: 20px;
-      }
-      .specs-text,
-      .carrier-text {
-        display: flex;
-        justify-content: flex-start;
-        font-weight: lighter;
-        .img-wrappy {
-          height: 50px;
+      div {
+        flex-basis: 250px;
+        .specs-rating {
+          font-size: 15px;
         }
-        .img-wrappy2 {
-          height: 100px;
-          position: relative;
-        }
-        img,
         p {
-          padding: 10px 0;
-        }
-        div {
-          flex-basis: 250px;
-          .specs-rating {
-            font-size: 15px;
-          }
-          p {
-            font-size: 24px;
-          }
+          font-size: 24px;
         }
       }
     }
   }
-  .full-specs-nav ul {
-    display: flex;
-    justify-content: space-between;
-    li {
-      padding: 15px 0;
-      flex: 1 0 150px;
-      text-align: center;
-      position: relative;
-      .focus-img {
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-        padding: 0 !important;
-        max-width: 100%;
-        max-height: 35px;
-      }
-      &.active {
-        background: #637fff;
-        & a {
-          color: #fff;
-        }
-        & img {
-          filter: brightness(20);
-        }
-      }
+}
+.full-specs-nav ul {
+  @extend .box;
+  justify-content: space-between;
+  background-color: #f4f9fc;
+  li {
+    padding: 15px 0 5px;
+    flex: 1 0 140px;
+    text-align: center;
+    position: relative;
+    &:hover {
+      background: #637fff;
       a {
-        color: #15cfb5;
-        text-decoration: none;
-        padding-top: 10px;
+        color: #fff;
       }
       img {
-        margin: 0 auto;
+        filter: brightness(20);
       }
+    }
+    a {
+      color: #15cfb5;
+      text-decoration: none;
+      padding-top: 5px;
+      font-size: 15px;
+      font-weight: 300;
+    }
+    img {
+      margin: 0 auto;
+      max-width: 20px;
     }
   }
 }
 
 // SPECFICATION
+.gap30 {
+  gap: 30px;
+}
+.specs-list {
+  flex: 1 0 auto;
+}
+.sidebar {
+  flex: 0 0 400px;
+}
 .specs-section {
   font-size: 16px;
   font-weight: 700;
-  box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: $box;
   .sec-header span {
     padding-left: 15px;
   }
   .specs-body {
     padding: 20px 25px;
     .specs-row {
-      display: flex;
+      @extend .box;
       div {
         flex: 0 0 300px;
         padding-bottom: 10px;
@@ -285,8 +288,12 @@ main {
 }
 
 // REVIEWS
+.review-sec {
+  margin-top: 30px;
+  box-shadow: $box;
+}
 .reviews {
-  margin: 15px;
+  margin: 15px 0;
   li {
     display: inline-block;
     border: 1px solid #666;
@@ -308,5 +315,107 @@ main {
     border-radius: 50%;
     height: 25px;
     display: inline-block;
+  }
+}
+
+.compare-sec {
+  box-shadow: $box;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+  .graph-sec {
+    margin-top: 80px;
+  }
+  .graph-space {
+    margin: 10px 0;
+    max-width: 750px;
+    padding-right: 15px;
+    .graph-title {
+      flex: 0 0 200px;
+      padding-right: 20px;
+      text-align: right;
+    }
+    .graph-bar {
+      flex: 1 0 auto;
+      height: 30px;
+      background-color: #eee;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+      &.green-bar:after {
+        background: #a8ff78; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #78ffd6,
+          #a8ff78
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #78ffd6,
+          #a8ff78
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      &.red-bar:after {
+        background: red;
+      }
+      &.blue-bar:after {
+        background: blue;
+      }
+      &.w-max:after {
+        width: 80%;
+      }
+      &.w-min:after {
+        width: 30%;
+      }
+      &.w-ok:after {
+        width: 50%;
+      }
+    }
+  }
+  .scale {
+    @extend .box;
+    flex: 1 0 auto;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 1px;
+      background-color: #eee;
+      left: 0;
+      top: -10px;
+      bottom: 0;
+    }
+    span {
+      position: relative;
+    }
+    .measure {
+      width: 1px;
+      height: 15px;
+      margin-top: -15px;
+      background: #eee;
+    }
+    @media screen and (max-width: 767px) {
+      span:nth-child(4n + 3),
+      span:nth-child(4n + 4) {
+        display: none !important;
+      }
+    }
+  }
+  .super-graph-info {
+    text-align: center;
+    max-width: 750px;
+    margin: 30px 0;
+    @media screen and (min-width: 768px) {
+      padding-left: 200px;
+    }
   }
 }
