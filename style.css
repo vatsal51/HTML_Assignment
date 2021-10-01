@@ -421,6 +421,10 @@ header .search {
   gap: 30px;
 }
 
+.gap10, .specs-section .specs-body .specs-row {
+  gap: 10px;
+}
+
 .specs-list {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -431,6 +435,7 @@ header .search {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 360px;
           flex: 0 0 360px;
+  margin: 0 auto;
 }
 
 .sidebar .ad {
@@ -503,16 +508,22 @@ header .search {
   padding: 20px 25px;
 }
 
-.specs-section .specs-body .specs-row .key {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 300px;
-          flex: 0 0 300px;
+.specs-section .specs-body .specs-row {
   padding-bottom: 10px;
+}
+
+.specs-section .specs-body .specs-row .key {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 300px;
+          flex: 1 0 300px;
 }
 
 .specs-section .specs-body .specs-row .value {
   color: #767795;
   font-weight: 500;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 300px;
+          flex: 1 0 300px;
 }
 
 .review-sec {
@@ -575,12 +586,11 @@ header .search {
   font-weight: 300;
 }
 
-.reviews .review-box .review-date img {
-  display: inline-block;
-}
-
 .reviews .review-box .review-date .star {
   margin: 0 10px;
+  display: inline-block;
+  max-width: 20px;
+  vertical-align: -2px;
 }
 
 .reviews .review-box .user-rating {
@@ -691,6 +701,7 @@ header .search {
 
 .compare-sec .scale span {
   position: relative;
+  font-size: 16px;
 }
 
 .compare-sec .scale .measure {
@@ -732,5 +743,11 @@ footer .social {
 
 footer .social span {
   margin-right: 10px;
+}
+
+footer .w300 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 300px;
+          flex: 1 0 300px;
 }
 /*# sourceMappingURL=style.css.map */

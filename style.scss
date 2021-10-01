@@ -312,11 +312,15 @@ header {
 .gap30 {
   gap: 30px;
 }
+.gap10 {
+  gap: 10px;
+}
 .specs-list {
   flex: 1 0 auto;
 }
 .sidebar {
   flex: 0 0 360px;
+  margin: 0 auto;
   .ad {
     padding: 30px;
     box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.1);
@@ -374,13 +378,16 @@ header {
     padding: 20px 25px;
     .specs-row {
       @extend .box;
+      @extend .gap10;
+      padding-bottom: 10px;
+
       .key {
-        flex: 0 0 300px;
-        padding-bottom: 10px;
+        flex: 1 0 300px;
       }
       .value {
         color: #767795;
         font-weight: 500;
+        flex: 1 0 300px;
       }
     }
   }
@@ -433,11 +440,12 @@ header {
     .review-date {
       font-size: 14px;
       font-weight: 300;
-      img {
-        display: inline-block;
-      }
+
       .star {
         margin: 0 10px;
+        display: inline-block;
+        max-width: 20px;
+        vertical-align: -2px;
       }
     }
     .user-rating {
@@ -531,6 +539,7 @@ header {
     }
     span {
       position: relative;
+      font-size: 16px;
     }
     .measure {
       width: 1px;
@@ -565,5 +574,8 @@ footer {
     span {
       margin-right: 10px;
     }
+  }
+  .w300 {
+    flex: 1 0 300px;
   }
 }
