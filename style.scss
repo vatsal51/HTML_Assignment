@@ -49,7 +49,7 @@ img {
   top: 50%;
   transform: translate(0, -50%);
   padding: 0 !important;
-  max-width: 100%;
+  max-width: 110px;
   max-height: 100%;
 }
 .box {
@@ -68,6 +68,7 @@ img {
 .sec-header img {
   display: inline-block;
   vertical-align: middle;
+  width: 21px;
 }
 .sec-header span {
   padding-left: 15px;
@@ -134,14 +135,19 @@ header {
     height: 500px;
   }
   .text-wrapper {
-    padding: 40px 15px;
-    flex: 1 0 auto;
+    padding: 40px 3vw;
+
+    flex: 5 0 auto;
     .main-text {
       display: flex;
       justify-content: space-between;
+      @media screen and (max-width: 576px) {
+        flex-direction: column;
+      }
       .product-title {
         font-size: 28px;
         font-weight: bold;
+        margin-bottom: 20px;
       }
       .rating-score {
         font-size: 23px;
@@ -160,6 +166,7 @@ header {
 
     .color {
       padding: 12px;
+      margin-top: 20px;
       margin-right: 12px;
       display: inline-block;
     }
@@ -174,13 +181,12 @@ header {
     }
 
     .price-text {
-      padding: 10px 0;
+      padding: 20px 0;
       .price {
         font-size: 23px;
         font-weight: 500;
+        align-self: center;
         color: #637fff;
-        vertical-align: middle;
-        margin-right: 30px;
       }
       a {
         text-transform: uppercase;
@@ -194,7 +200,7 @@ header {
       }
     }
     .specs-text {
-      margin-top: 20px;
+      margin-top: 10px;
     }
     .specs-text,
     .carrier-text {
@@ -204,15 +210,16 @@ header {
         height: 50px;
       }
       .img-wrappy2 {
-        height: 100px;
+        height: 35px;
         position: relative;
+        margin: 40px 0 10px;
       }
       img,
       p {
         padding: 10px 0;
       }
-      div {
-        flex-basis: 250px;
+      .specs-div {
+        flex-basis: 150px;
         .specs-rating {
           font-size: 15px;
         }
@@ -220,6 +227,51 @@ header {
           font-size: 24px;
         }
       }
+      .carrier-div {
+        flex-basis: 200px;
+        .carrier-price {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .hr {
+    margin-top: 30px;
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: #eee;
+  }
+  .wrapy-rating {
+    margin-top: 10px;
+    .rating-img {
+      display: inline-block;
+      vertical-align: -15px;
+    }
+    .rating-text {
+      display: inline-block;
+      font-size: 0;
+      text-transform: uppercase;
+      margin-left: 5px;
+      p {
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #696a8c;
+      }
+    }
+    .number,
+    .rating {
+      color: #fff;
+      padding: 2px 7px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .number {
+      background: #15cfb5;
+    }
+    .rating {
+      background: #778fff;
     }
   }
 }
@@ -229,7 +281,7 @@ header {
   background-color: #f4f9fc;
   li {
     padding: 15px 0 5px;
-    flex: 1 0 140px;
+    flex: 1 0 100px;
     text-align: center;
     position: relative;
     &:hover {
@@ -251,6 +303,7 @@ header {
     img {
       margin: 0 auto;
       max-width: 20px;
+      max-height: 20px;
     }
   }
 }
@@ -263,7 +316,52 @@ header {
   flex: 1 0 auto;
 }
 .sidebar {
-  flex: 0 0 400px;
+  flex: 0 0 360px;
+  .ad {
+    padding: 30px;
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.1);
+  }
+  .related-products {
+    margin-top: 30px;
+
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.1);
+    .related-header {
+      padding: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    .product {
+      padding: 20px;
+      display: flex;
+      gap: 25px;
+      .product-details {
+        .product-title {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 14px;
+        }
+        .price {
+          color: #607cff;
+          font-size: 16px;
+          font-weight: 500;
+          margin: 10px 0;
+          line-height: 16px;
+          span {
+            margin-right: 5px;
+          }
+        }
+        .sidebar-rating {
+          font-size: 14px;
+          line-height: 14px;
+          font-weight: 300;
+          img {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
 }
 .specs-section {
   font-size: 16px;
@@ -276,12 +374,13 @@ header {
     padding: 20px 25px;
     .specs-row {
       @extend .box;
-      div {
+      .key {
         flex: 0 0 300px;
         padding-bottom: 10px;
       }
       .value {
-        color: #666;
+        color: #767795;
+        font-weight: 500;
       }
     }
   }
@@ -293,6 +392,7 @@ header {
   box-shadow: $box;
 }
 .reviews {
+  padding: 25px 30px;
   margin: 15px 0;
   li {
     display: inline-block;
@@ -315,9 +415,44 @@ header {
     border-radius: 50%;
     height: 25px;
     display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  .positive {
+    margin-bottom: 25px;
+    margin-top: 25px;
+    .plus {
+      background: #8dc63f;
+    }
+    .minus {
+      background: #cf1915;
+    }
+  }
+  .review-box {
+    margin: 35px 0;
+    .review-date {
+      font-size: 14px;
+      font-weight: 300;
+      img {
+        display: inline-block;
+      }
+      .star {
+        margin: 0 10px;
+      }
+    }
+    .user-rating {
+      margin: 10px 0;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .user-name {
+      font-size: 14px;
+      font-weight: 300;
+    }
   }
 }
 
+//COMPARE
 .compare-sec {
   box-shadow: $box;
   padding-bottom: 10px;
@@ -416,6 +551,19 @@ header {
     margin: 30px 0;
     @media screen and (min-width: 768px) {
       padding-left: 200px;
+    }
+  }
+}
+
+/* FOOTER */
+footer {
+  background: #0f0f11;
+  color: #eee;
+  padding: 25px 0;
+  .social {
+    margin: 20px 0;
+    span {
+      margin-right: 10px;
     }
   }
 }
