@@ -69,7 +69,7 @@ img {
 .sec-header img {
   display: inline-block;
   vertical-align: middle;
-  width: 21px;
+  // width: 21px;
 }
 .sec-header span {
   padding-left: 15px;
@@ -109,6 +109,7 @@ header {
   }
 }
 
+//BREADCRUMB
 .breadcrumbs {
   padding: 10px 0;
   font-size: 0;
@@ -127,6 +128,7 @@ header {
   }
 }
 
+// MAIN
 .product-box {
   box-shadow: $box;
   margin-bottom: 30px;
@@ -296,7 +298,7 @@ header {
 }
 
 
-
+// SPECFICATION nav
 .full-specs-nav ul {
   @extend .box;
   justify-content: space-between;
@@ -340,6 +342,8 @@ header {
 .specs-list {
   flex: 1 0 auto;
 }
+
+// SIDEBAR
 .sidebar {
   flex: 0 0 360px;
   margin: 0 auto;
@@ -393,6 +397,8 @@ header {
     }
   }
 }
+
+// SPECIFICATION
 .specs-section {
   font-size: 16px;
   font-weight: 700;
@@ -517,28 +523,28 @@ header {
         z-index: 1;
       }
       &.green-bar:after {
-        background: #a8ff78; /* fallback for old browsers */
+        background: #a8ff78; 
         background: -webkit-linear-gradient(
           to right,
           #78ffd6,
           #a8ff78
-        ); /* Chrome 10-25, Safari 5.1-6 */
+        );
         background: linear-gradient(
           to right,
           #78ffd6,
           #a8ff78
-        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        ); 
       }
       &.red-bar:after {
-       background: #ee0979;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+       background: #ee0979;  
+        background: -webkit-linear-gradient(to right, #ff6a00, #ee0979); 
+        background: linear-gradient(to right, #ff6a00, #ee0979); 
         ;
       }
       &.blue-bar:after {
-        background: #5433FF;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: #5433FF;  
+background: -webkit-linear-gradient(to right, #A5FECB, #20BDFF, #5433FF); 
+background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF); 
 
       }
       &.w-max:after {
