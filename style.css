@@ -120,11 +120,11 @@ header #hamburger {
 
 header #hamburger span {
   display: block;
-  width: 33px;
+  width: 30px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #cdcdcd;
+  background: #15cfb5;
   border-radius: 3px;
   z-index: 1;
   -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
@@ -139,17 +139,16 @@ header #hamburger span:nth-child(3) {
 
 header #hamburger.active span {
   opacity: 1;
-  background: #232323;
 }
 
 header #hamburger.active span:nth-child(1) {
-  -webkit-transform: rotate(-45deg) translate(-5px, 11px);
-          transform: rotate(-45deg) translate(-5px, 11px);
+  -webkit-transform: rotate(-45deg) translate(-4px, 9px);
+          transform: rotate(-45deg) translate(-4px, 9px);
 }
 
 header #hamburger.active span:nth-child(3) {
-  -webkit-transform: rotate(45deg) translate(-1px, -8px);
-          transform: rotate(45deg) translate(-1px, -8px);
+  -webkit-transform: rotate(45deg) translate(-3px, -9px);
+          transform: rotate(45deg) translate(-3px, -9px);
 }
 
 header #hamburger.active span:nth-child(2) {
@@ -827,7 +826,7 @@ header .list.active {
 .compare-sec .scale .measure {
   width: 1px;
   height: 15px;
-  margin-top: -15px;
+  margin-top: -17px;
   background: #eee;
 }
 
