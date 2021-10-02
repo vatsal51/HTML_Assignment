@@ -95,7 +95,6 @@ img {
 .sec-header img {
   display: inline-block;
   vertical-align: middle;
-  width: 21px;
 }
 
 .sec-header span {
@@ -353,7 +352,6 @@ header .search {
 
 .product-box .wrapy-rating {
   margin-top: 10px;
-  position: relative;
 }
 
 .product-box .wrapy-rating .tooltip {
@@ -372,6 +370,7 @@ header .search {
   font-size: 0;
   text-transform: uppercase;
   margin-left: 5px;
+  position: relative;
 }
 
 .product-box .wrapy-rating .rating-text p {
@@ -556,6 +555,7 @@ header .search {
 
 .review-sec {
   margin-top: 30px;
+  margin-bottom: 30px;
   -webkit-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.1);
 }
@@ -677,29 +677,20 @@ header .search {
 
 .compare-sec .graph-space .graph-bar.green-bar:after {
   background: #a8ff78;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(linear, left top, right top, from(#78ffd6), to(#a8ff78));
   background: linear-gradient(to right, #78ffd6, #a8ff78);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .compare-sec .graph-space .graph-bar.red-bar:after {
   background: #ee0979;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(linear, left top, right top, from(#ff6a00), to(#ee0979));
   background: linear-gradient(to right, #ff6a00, #ee0979);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .compare-sec .graph-space .graph-bar.blue-bar:after {
-  background: #5433FF;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#A5FECB), color-stop(#20BDFF), to(#5433FF));
-  background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #5433ff;
+  background: -webkit-gradient(linear, left top, right top, from(#a5fecb), color-stop(#20bdff), to(#5433ff));
+  background: linear-gradient(to right, #a5fecb, #20bdff, #5433ff);
 }
 
 .compare-sec .graph-space .graph-bar.w-max:after {
@@ -794,11 +785,11 @@ footer .social span svg {
 }
 
 footer .social span .svg1:hover {
-  fill: #4267B2;
+  fill: #4267b2;
 }
 
 footer .social span .svg2:hover {
-  fill: #1DA1F2;
+  fill: #1da1f2;
 }
 
 footer .social span .svg3:hover {

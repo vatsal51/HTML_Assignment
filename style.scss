@@ -209,7 +209,7 @@ header {
         padding: 15px 50px;
         text-decoration: none;
         transition: 0.35s all ease-in-out;
-        &:hover{
+        &:hover {
           background: #15cfb5;
         }
       }
@@ -259,12 +259,11 @@ header {
   }
   .wrapy-rating {
     margin-top: 10px;
-    position: relative;
-   .tooltip{
+    .tooltip {
       position: absolute;
       top: 0;
       right: -22px;
-   }
+    }
     .rating-img {
       display: inline-block;
       vertical-align: -15px;
@@ -274,6 +273,8 @@ header {
       font-size: 0;
       text-transform: uppercase;
       margin-left: 5px;
+      position: relative;
+
       p {
         font-size: 12px;
         font-weight: 600;
@@ -296,7 +297,6 @@ header {
     }
   }
 }
-
 
 // SPECFICATION nav
 .full-specs-nav ul {
@@ -368,9 +368,9 @@ header {
           font-size: 14px;
           font-weight: 700;
           line-height: 14px;
-         a{
-          color: #696a8c;
-         }
+          a {
+            color: #696a8c;
+          }
         }
         .price {
           color: #607cff;
@@ -428,6 +428,7 @@ header {
 // REVIEWS
 .review-sec {
   margin-top: 30px;
+  margin-bottom: 30px;
   box-shadow: $box;
 }
 .reviews {
@@ -523,29 +524,24 @@ header {
         z-index: 1;
       }
       &.green-bar:after {
-        background: #a8ff78; 
-        background: -webkit-linear-gradient(
-          to right,
-          #78ffd6,
-          #a8ff78
-        );
-        background: linear-gradient(
-          to right,
-          #78ffd6,
-          #a8ff78
-        ); 
+        background: #a8ff78;
+        background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);
+        background: linear-gradient(to right, #78ffd6, #a8ff78);
       }
       &.red-bar:after {
-       background: #ee0979;  
-        background: -webkit-linear-gradient(to right, #ff6a00, #ee0979); 
-        background: linear-gradient(to right, #ff6a00, #ee0979); 
-        ;
+        background: #ee0979;
+        background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+        background: linear-gradient(to right, #ff6a00, #ee0979);
       }
       &.blue-bar:after {
-        background: #5433FF;  
-background: -webkit-linear-gradient(to right, #A5FECB, #20BDFF, #5433FF); 
-background: linear-gradient(to right, #A5FECB, #20BDFF, #5433FF); 
-
+        background: #5433ff;
+        background: -webkit-linear-gradient(
+          to right,
+          #a5fecb,
+          #20bdff,
+          #5433ff
+        );
+        background: linear-gradient(to right, #a5fecb, #20bdff, #5433ff);
       }
       &.w-max:after {
         width: 80%;
@@ -616,36 +612,34 @@ footer {
       height: 24px;
       display: inline-block;
       cursor: pointer;
-      svg{
+      svg {
         transition: 0.35s all ease-in-out;
       }
-     .svg1{
-       &:hover{
-          fill: #4267B2;
-       }
-     }
-     .svg2{
-       &:hover{
-          fill: #1DA1F2;
-       }
-     }
-     .svg3{
-       &:hover{
+      .svg1 {
+        &:hover {
+          fill: #4267b2;
+        }
+      }
+      .svg2 {
+        &:hover {
+          fill: #1da1f2;
+        }
+      }
+      .svg3 {
+        &:hover {
           fill: #8a3ab9;
-       }
-     }
+        }
+      }
     }
   }
   .w300 {
     flex: 1 0 300px;
   }
-  h4{
+  h4 {
     margin-top: 25px;
     margin-bottom: 20px;
   }
 }
-
-
 
 .container2 {
   position: relative;
@@ -668,7 +662,7 @@ footer {
     width: 15px;
     border-right: 1px solid black;
     /* Create the checkmark/indicator (hidden when not checked) */
-   &:after {
+    &:after {
       left: 4px;
       top: 0px;
       width: 4px;
@@ -694,9 +688,9 @@ footer {
       background-color: #2196f3;
     }
     /* Show the checkmark when checked */
-&:checked ~ .checkmark:after {
-  display: block;
-}
+    &:checked ~ .checkmark:after {
+      display: block;
+    }
   }
 }
 
@@ -705,7 +699,4 @@ footer {
 //   background-color: #ccc;
 // }
 
-
-
 /* Style the checkmark/indicator */
-
