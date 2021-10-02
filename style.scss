@@ -6,6 +6,21 @@ $box: 0 5px 10px -2px rgba(#000000, 0.1);
   padding: 0;
   max-width: 100%;
 }
+
+// Custom Scrollbar
+#Reviews::-webkit-scrollbar {
+  width: 20px;
+  background: #f4f9fc;
+}
+#Reviews::-webkit-scrollbar:hover {
+  border-right: 4px solid #eee;
+}
+#Reviews::-webkit-scrollbar-thumb {
+  background: #637fff;
+  border: 5px solid white;
+  box-shadow: $box;
+}
+//
 html {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
@@ -69,7 +84,6 @@ img {
 .sec-header img {
   display: inline-block;
   vertical-align: middle;
-  // width: 21px;
 }
 .sec-header span {
   padding-left: 15px;
@@ -489,6 +503,8 @@ header {
   margin-top: 30px;
   margin-bottom: 30px;
   box-shadow: $box;
+  overflow-y: scroll;
+  max-height: 750px;
 }
 .reviews {
   padding: 25px 30px;
@@ -700,6 +716,7 @@ footer {
   }
 }
 
+// Custom checkbox box
 .container2 {
   position: relative;
   padding-left: 20px;
@@ -712,7 +729,6 @@ footer {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  /* Create a custom checkbox */
   .checkmark {
     position: absolute;
     top: 0;
@@ -720,7 +736,6 @@ footer {
     height: 15px;
     width: 15px;
     border-right: 1px solid black;
-    /* Create the checkmark/indicator (hidden when not checked) */
     &:after {
       left: 4px;
       top: 0px;
@@ -735,27 +750,17 @@ footer {
       display: none;
     }
   }
-  /* Hide the browser's default checkbox */
   input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-    /* When the checkbox is checked, add a blue background */
     &:checked ~ .checkmark {
       background-color: #2196f3;
     }
-    /* Show the checkmark when checked */
     &:checked ~ .checkmark:after {
       display: block;
     }
   }
 }
-
-// /* On mouse-over, add a grey background color */
-// .container2:hover input ~ .checkmark {
-//   background-color: #ccc;
-// }
-
-/* Style the checkmark/indicator */

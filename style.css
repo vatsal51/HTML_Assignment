@@ -7,6 +7,22 @@
   max-width: 100%;
 }
 
+#Reviews::-webkit-scrollbar {
+  width: 20px;
+  background: #f4f9fc;
+}
+
+#Reviews::-webkit-scrollbar:hover {
+  border-right: 4px solid #eee;
+}
+
+#Reviews::-webkit-scrollbar-thumb {
+  background: #637fff;
+  border: 5px solid white;
+  -webkit-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.1);
+}
+
 html {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
@@ -648,6 +664,8 @@ header .list.active {
   margin-bottom: 30px;
   -webkit-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.1);
           box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+  max-height: 750px;
 }
 
 .reviews {
@@ -910,8 +928,6 @@ footer h4 {
   -ms-user-select: none;
   -webkit-user-select: none;
           user-select: none;
-  /* Create a custom checkbox */
-  /* Hide the browser's default checkbox */
 }
 
 .container2 .checkmark {
@@ -921,7 +937,6 @@ footer h4 {
   height: 15px;
   width: 15px;
   border-right: 1px solid black;
-  /* Create the checkmark/indicator (hidden when not checked) */
 }
 
 .container2 .checkmark:after {
@@ -944,8 +959,6 @@ footer h4 {
   cursor: pointer;
   height: 0;
   width: 0;
-  /* When the checkbox is checked, add a blue background */
-  /* Show the checkmark when checked */
 }
 
 .container2 input:checked ~ .checkmark {
@@ -955,6 +968,4 @@ footer h4 {
 .container2 input:checked ~ .checkmark:after {
   display: block;
 }
-
-/* Style the checkmark/indicator */
 /*# sourceMappingURL=style.css.map */
