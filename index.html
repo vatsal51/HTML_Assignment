@@ -21,7 +21,8 @@
       <div class="container">
         <div class="box">
           <a href="#" class="logo">SITENAME</a>
-          <ul class="box list">
+       
+          <ul class="box list" id="list">
             <li><a href="#">FEATURE PHONE</a></li>
             <li><a href="#">ACCESSORIES</a></li>
             <li><a href="#">WEARABLE TECH</a></li>
@@ -29,10 +30,10 @@
             <li><a href="#">RESOURCES</a></li>
           </ul>
           <a href="#" class="search"><img src="Images/search.svg" alt="" /></a>
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div id="hamburger">
+            <span class="ham"></span>
+            <span class="ham"></span>
+            <span class="ham"></span>
           </div>
         </div>
       </div>
@@ -801,5 +802,13 @@
       </div>
     </footer>
     <!-- FOOTER ends -->
+    <script>
+      var _elem = document.querySelector('#hamburger');
+      _elem.addEventListener("click",function(){
+        document.getElementById("list").classList.toggle("active");
+        _elem.classList.toggle("active");
+console.log("clicked");
+});
+    </script>
   </body>
 </html>

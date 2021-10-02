@@ -107,6 +107,63 @@ header {
           box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.1);
 }
 
+header #hamburger {
+  margin-left: 15px;
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  header #hamburger {
+    display: block;
+  }
+}
+
+header #hamburger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+header #hamburger span :first-child {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+header #hamburger span :nth-child(3) {
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+header #hamburger.active span {
+  opacity: 1;
+  background: #232323;
+}
+
+header #hamburger.active span:nth-child(1) {
+  -webkit-transform: rotate(-45deg) translate(-5px, 11px);
+          transform: rotate(-45deg) translate(-5px, 11px);
+}
+
+header #hamburger.active span:nth-child(3) {
+  -webkit-transform: rotate(45deg) translate(-1px, -8px);
+          transform: rotate(45deg) translate(-1px, -8px);
+}
+
+header #hamburger.active span:nth-child(2) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
 header .box, header .product-box .text-wrapper .specs-text, .product-box .text-wrapper header .specs-text,
 header .product-box .text-wrapper .carrier-text, .product-box .text-wrapper header .carrier-text, header .full-specs-nav ul, .full-specs-nav header ul, header .specs-section .specs-body .specs-row, .specs-section .specs-body header .specs-row, header .compare-sec .scale, .compare-sec header .scale {
   -webkit-box-align: center;
@@ -115,6 +172,15 @@ header .product-box .text-wrapper .carrier-text, .product-box .text-wrapper head
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+  header .box, header .product-box .text-wrapper .specs-text, .product-box .text-wrapper header .specs-text,
+  header .product-box .text-wrapper .carrier-text, .product-box .text-wrapper header .carrier-text, header .full-specs-nav ul, .full-specs-nav header ul, header .specs-section .specs-body .specs-row, .specs-section .specs-body header .specs-row, header .compare-sec .scale, .compare-sec header .scale {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 header .logo {
@@ -143,10 +209,41 @@ header .search {
   margin-left: 20px;
 }
 
+header .list {
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+}
+
 @media screen and (max-width: 1024px) {
   header .list {
-    display: none;
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    width: 100%;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 64px;
+    background: #fff;
+    -webkit-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    visibility: hidden;
+    opacity: 0;
   }
+}
+
+header .list.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+  padding: 10px 0;
 }
 
 .breadcrumbs {
